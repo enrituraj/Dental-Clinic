@@ -74,9 +74,55 @@ body{
     width: 64px;
     height: 32px;
 }
-
 .navbar .nav_items .menu_list{
-    display: none;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    left: -300px;
+    transition: left 0.5s ease-in;
+}
+.navbar .nav_items .menu_list.active{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding:4rem 2rem ;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    min-width: 250px;
+    height: 100vh;
+    z-index: 10;
+    list-style: none;
+    
+    transition: left 0.5s ease-in;
+}
+.menu_list.active::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: #11111170;
+    z-index: -1;
+}
+.menu_list .icon{
+    position: absolute;
+    color: #fff;
+    font-size: 48px;
+    top: 0px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.menu_list .menu_li{
+    margin-bottom:1rem;
+}
+.menu_list .menu_li .menu_link{
+    text-decoration: none;
+}
+.menu_list .menu_li .menu_link:hover{
+    color: #999;
 }
 
 .navbar .menu_bar{
@@ -490,4 +536,27 @@ section{
     color: #fff;
     padding: 1rem;
     text-align: center;
+}
+
+@media (max-width:760px) {
+    .grid.col-2{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+    .grid.col-3{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+    .mission .card{
+        flex-direction: column;
+    }
+    .mission .card .shape{
+        width: 50px;
+    }
+    .showcase_section img ,
+    .showcase_section.reverse img,
+    .showcase_section.reverse.contact_section img,
+    .showcase_section .text_content,
+    .showcase_section.reverse .text_content,
+    .showcase_section.reverse.contact_section .text_content{
+        grid-column: 1/-1;
+    }
 }

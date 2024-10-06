@@ -17,6 +17,9 @@
                 <img src="./Assets/images/logo.png" alt="Logo">
             </a>
             <ul class="menu_list">
+                <span class="icon" onclick="menu_list_toggle()">
+                    <i class='bx bx-x'></i>
+                </span>
                 <li class="menu_li">
                     <a href="index.html" class="menu_link">Home</a>
                 </li>
@@ -25,7 +28,7 @@
                 </li>
             </ul>
             <div class="menu_bar">
-                <i class='bx bx-menu'></i>
+                <i class='bx bx-menu' onclick="menu_list_toggle()"></i>
             </div>
         </div>
     </nav>
@@ -481,6 +484,12 @@
         <p>Dental Clinic </p>
     </footer>
 
+    <script>
+        function menu_list_toggle(){
+            const menu_list = document.querySelector(".menu_list");
+            menu_list.classList.toggle('active')
+        }
+    </script>
     <script src="./Assets/js/main.js"></script>
 </body>
 </html>
