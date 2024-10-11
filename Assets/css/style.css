@@ -46,6 +46,9 @@ img,svg{
 .grid.col-3{
     grid-template-columns: repeat(3,1fr);
 }
+.grid.col-4{
+    grid-template-columns: repeat(4,1fr);
+}
 
 body{
     font-family: "Open Sans", sans-serif;
@@ -545,6 +548,9 @@ section{
     .grid.col-3{
         grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     }
+    .grid.col-4{
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    }
     .mission .card{
         flex-direction: column;
     }
@@ -559,4 +565,96 @@ section{
     .showcase_section.reverse.contact_section .text_content{
         grid-column: 1/-1;
     }
+}
+
+
+
+/* about page */
+.services .cards{
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    isolation: isolate;
+    background-color: #ff9c80;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+}
+
+.services .cards img{
+    position: absolute;
+    inset: 0;
+    object-position:center;
+    object-fit: cover;
+    z-index: -2;
+    user-select: none;
+    pointer-events: none;
+}
+.services .cards::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #999;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.services .cards .sub_card{
+    background-color: #fff;
+    margin-bottom: 2rem;
+    padding: 30px 20px;
+}
+
+.services .cards .sub_card .s_no{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+.services .cards .sub_card .services_name{
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.services .cards .sub_card .learn_more{
+    display: block;
+    margin: auto;
+    font-size: 14px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.services .col:nth-child(2n+1) .sub_card .s_no{
+    color: #ff724a;
+}
+.services .col:nth-child(2n+1) .cards::before{
+    background: #fff;
+    opacity: 1;
+}
+.services .col:nth-child(2n+1) .cards:hover::before{
+    opacity: 0;
+}
+
+.services .col:nth-child(2n+2) .cards::before{
+    background: #ff724a;
+    opacity: 0;
+}
+.services .col:nth-child(2n+2) .cards:hover::before{
+    opacity: 1;
+}
+
+
+.services .col:nth-child(2n+2) .sub_card .s_no{
+    color: #fff;
+}
+
+.services .col:nth-child(2n+2) .sub_card {
+    background-color: #ff724a;
+    color: #fff;
+    border-radius: 8px;
 }
