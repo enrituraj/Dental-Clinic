@@ -709,3 +709,38 @@ section{
     font-size: 18px;
     font-style: italic;
 }
+
+.feature_text_content{
+    text-align: center;
+
+}
+.feature_text_content h2{
+    font-size: 55px;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+.feature_text_content p{
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    width: 75%;
+    margin-inline: auto;
+}
+
+.team_section{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 2rem;
+}
+.img_group{
+    grid-column: 1/6;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.team_text_content{
+    grid-column: 6/12;
+    margin: auto;
+}
