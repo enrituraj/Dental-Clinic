@@ -148,9 +148,14 @@ section{
 }
 .showcase_section img {
     grid-column: 6/-1;
+    min-height: 625px;
+    object-fit: cover;
+    object-position: left;
 }
 .showcase_section.reverse img{
     grid-column: 1/8;
+    object-position: right;
+
 }
 .showcase_section.reverse.contact_section img{
     grid-column: 1/7;
@@ -551,6 +556,10 @@ section{
     .grid.col-4{
         grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
     }
+    .people_talking,.team_section{
+        display: flex !important;
+        flex-wrap: wrap;
+    }
     .mission .card{
         flex-direction: column;
     }
@@ -570,6 +579,22 @@ section{
 
 
 /* about page */
+.showcase.img_left img{
+    grid-column: 1/7;
+    min-height: 625px;
+    object-position: right;
+    object-fit: cover;
+}
+.showcase.img_left .text_content{
+    grid-column: 7/12;
+    padding-right: 2rem;
+}
+.showcase .title{
+    font-size: 48px !important;
+    line-height: 54px;
+}
+
+
 .services .cards{
     position: relative;
     width: 100%;
@@ -601,8 +626,9 @@ section{
 
 .services .cards .sub_card{
     background-color: #fff;
-    margin-bottom: 2rem;
-    padding: 30px 20px;
+    margin:1rem 2.5rem 2rem;
+    padding: 30px;
+    text-align: center;
 }
 
 .services .cards .sub_card .s_no{
@@ -612,17 +638,20 @@ section{
     text-align: center;
 }
 .services .cards .sub_card .services_name{
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 28px;
+    line-height: 33px;
     text-align: center;
     font-weight: 400;
     margin-top: 20px;
 }
 .services .cards .sub_card .learn_more{
-    display: block;
+    display: inline-block;
     margin: auto;
     font-size: 14px;
     margin-top: 20px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    border-bottom: 2px solid #fff;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
@@ -743,4 +772,17 @@ section{
 .team_text_content{
     grid-column: 6/12;
     margin: auto;
+}
+
+.feature_bg_image{
+    min-height: 650px;
+    position: relative;
+    margin-top: -20rem;
+    z-index: -1;
+}
+.feature_bg_image img{
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    object-position: center;
 }
