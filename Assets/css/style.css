@@ -833,6 +833,83 @@ section{
         grid-column: 1/-1;
     }
 
+    .showcase_section .text_content{
+        padding-inline: 2rem;
+    }
+    .showcase_section h1{
+        font-size: 3rem !important;
+    }
+    .showcase_section img{
+        min-height: 100%;
+        padding-left: 2rem;
+        margin-top: 2rem;
+    }
+    .showcase_section.reverse img{
+        min-height: 100%;
+        padding-left: 0;
+        padding-right: 2rem;
+    }
+    .feature .card{
+        width: 100%;
+    }
+    .mission .grid{
+        padding-left: 3rem;
+        padding-right: 2rem;
+    }
+    .mission .section_title{
+        font-size: 2rem;
+    }
+    .about_us{
+        background-position-x: right -450px;
+        padding: 1rem;
+    }
+    .about_us .text_content{
+        max-width: 225px;
+    }
+    .about_us .text_content .row {
+        flex-wrap: wrap;
+        gap: 0rem;
+    }
+    .about_us .section_title{
+        font-size: 1rem;
+    }
+    .about_us h2{
+        font-size: 1.8rem;
+    }
+    .about_us .col p{
+        padding-block: 1rem;
+    }
 
+    .testimonial .section_title{
+        font-size: 2rem;
+    }
+    .testimonial .grid{
+        padding-inline: 2rem;
+    }
+    .quality_oral .text_content{
+        margin-top: 4rem;
+    }
+    .quality_oral .text_content h1{
+        font-size: 34px !important;
+    }
+    .quality_oral .text_content{
+        margin-inline: 0 !important;
+    }
+
+    .our_team .section_title h2{
+        font-size: 2rem;
+    }
+    .our_team .section_title p{
+        font-size: 1rem;
+    }
+    .our_team .grid.container{
+        padding: 0 !important;
+    }
+    .contact{
+        margin-top: 2rem;
+    }
+    .contact_info .card{
+        margin-inline: 2rem;
+    }
 
 }
